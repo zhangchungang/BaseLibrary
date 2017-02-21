@@ -1,0 +1,27 @@
+<resources>
+
+
+    <!--默认标题栏-->
+    <style name="defaultTitleBarStyle">
+        <!--标题栏高度-->
+        <item name="barHeight">48dp</item>
+        <!--标题栏背景-->
+        <item name="barBackground">#78c3f5</item>
+        <!--标题文字颜色-->
+        <item name="barTitleTextColor">#FFFFFF</item>
+        <!--标题文字大小-->
+        <item name="barTitleTextSize">18px</item>
+        <!--副标题文字颜色-->
+        <item name="barSubtitleTextColor">#FFFFFF</item>
+        <!--副标题文字大小-->
+        <item name="barSubtitleTextSize">12px</item>
+        <!--图标大固定大小-->
+        <item name="logoSize">30dp</item>
+        <!--图标按下时的背景颜色-->
+        <item name="logoPressedBackgroundColor">#000</item>
+        <!--手机顶部状态栏颜色-->
+        <item name="statusBarColor">#000</item>
+        <!--手机底部功能栏颜色-->
+        <item name="functionBarColor">#000</item>
+    </style>
+</resources>

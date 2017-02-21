@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题栏-->
+    <attr name="titleBarAttr" format="reference"/>
+    <declare-styleable name="TitleBarView">
+        <!--标题栏高度-->
+        <attr name="barHeight" format="dimension"/>
+        <!--标题栏背景-->
+        <attr name="barBackground" format="color"/>
+        <!--标题文字颜色-->
+        <attr name="barTitleTextColor" format="color"/>
+        <!--标题文字大小-->
+        <attr name="barTitleTextSize"  format="dimension"/>
+        <!--副标题文字颜色-->
+        <attr name="barSubtitleTextColor" format="color"/>
+        <!--副标题文字大小-->
+        <attr name="barSubtitleTextSize"  format="dimension"/>
+        <!--手机顶部状态栏颜色-->
+        <attr name="statusBarColor" format="color"/>
+        <!--手机底部功能栏颜色-->
+        <attr name="functionBarColor" format="color"/>
+        <!--图标大固定大小-->
+        <attr name="logoSize" format="dimension"/>
+        <!--图标按下时的背景颜色-->
+        <attr name="logoPressedBackgroundColor" format="color"/>
+    </declare-styleable>
+</resources>
