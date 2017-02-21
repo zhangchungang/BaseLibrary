@@ -1,6 +1,11 @@
 <resources>
 
-
+    <!--默认引导页-->
+    <style name="defaultScrollPageView">
+        <item name="indicatorColor">#ff4060</item>
+        <item name="indicatorSize">20dp</item>
+        <item name="indicatorSpace">5dp</item>
+    </style>
     <!--默认标题栏-->
     <style name="defaultTitleBarStyle">
         <!--标题栏高度-->

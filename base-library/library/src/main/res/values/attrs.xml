@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--标题栏-->
+    <!--滚动页View-->
+    <attr name="scrollPageAttr" format="reference"/>
+    <declare-styleable name="ScrollPageView">
+        <attr name="indicatorColor" format="color"/>
+        <attr name="indicatorSize" format="dimension"/>
+        <attr name="indicatorSpace" format="dimension"/>
+    </declare-styleable>
+    <!--标题栏View-->
     <attr name="titleBarAttr" format="reference"/>
     <declare-styleable name="TitleBarView">
         <!--标题栏高度-->

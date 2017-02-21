@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="titleBarId" type="id"/>
+    <item name="pager_viewpager" type="id"/>
+    <item name="pager_indicator" type="id"/>
 </resources>
