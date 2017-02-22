@@ -1,11 +1,15 @@
 <resources>
     <style name="AppTheme.titleBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:fitsSystemWindows">true</item>
+   <!--     <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>-->
         <!--标题栏样式-->
         <item name="titleBarAttr">@style/StyleTitleBar</item>
-        <item name="scrollPageAttr">@style/defaultScrollPageView</item>
+        <item name="dotIndicatorAttr">@style/StyleDotIndicator</item>
     </style>
+    <style name="StyleDotIndicator" parent="defaultDotIndicator">
 
+    </style>
     <!--定义标题栏样式-->
     <style name="StyleTitleBar" parent="defaultTitleBarStyle">
         <!--标题栏高度-->
@@ -13,8 +17,5 @@
         <item name="barBackground">#3ea1f7</item>
         <item name="barTitleTextSize">22px</item>
         <item name="barTitleTextColor">#FFFFFF</item>
-    </style>
-    <style name="StyleScrollPageView" parent="defaultScrollPageView">
-        <item name="indicatorColor">#3ea1f7</item>
     </style>
 </resources>

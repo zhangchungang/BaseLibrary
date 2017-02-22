@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--滚动页View-->
-    <attr name="scrollPageAttr" format="reference"/>
-    <declare-styleable name="ScrollPageView">
-        <attr name="indicatorColor" format="color"/>
-        <attr name="indicatorSize" format="dimension"/>
-        <attr name="indicatorSpace" format="dimension"/>
+
+    <!--圆点指示器-->
+    <attr name="dotIndicatorAttr" format="reference"/>
+    <declare-styleable name="DotIndicator">
+        <!--圆点颜色-->
+        <attr name="dotColor" format="color"/>
+        <!--圆点大小-->
+        <attr name="dotSize" format="dimension"/>
+        <!--圆点间的间距-->
+        <attr name="dotSpace" format="dimension"/>
     </declare-styleable>
+
     <!--标题栏View-->
     <attr name="titleBarAttr" format="reference"/>
     <declare-styleable name="TitleBarView">

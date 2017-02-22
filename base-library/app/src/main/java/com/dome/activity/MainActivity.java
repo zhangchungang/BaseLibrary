@@ -1,6 +1,8 @@
 package com.dome.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -8,28 +10,20 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.library.activity.AppTitleBarActivity;
-import com.library.views.ScrollPageView;
-
-import org.w3c.dom.Text;
+import com.library.views.page.indicator.DotIndicator;
 
 import butterknife.Bind;
 
 public class MainActivity extends AppTitleBarActivity {
 
-    @Bind(R.id.mScrollPageView)
-    ScrollPageView mScrollPageView;
+    @Bind(R.id.main_indicator)
+    DotIndicator indicator;
+    @Bind(R.id.main_viewpager)
+    ViewPager pager;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitleBarContentView(R.layout.activity_main);
-        getTitleBar().setTitle("标题");
-        getTitleBar().setLeftLogo(R.drawable.btn_return_normal);
-        getTitleBar().setLeftLogoOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
         TextView tv01 = new TextView(this);
         tv01.setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -48,7 +42,29 @@ public class MainActivity extends AppTitleBarActivity {
                 ViewGroup.LayoutParams.MATCH_PARENT));
         tv03.setGravity(Gravity.CENTER);
         tv03.setText("03");
-        View[] v = {tv01,tv02,tv03};
-        mScrollPageView.setViews(v);
+        final View[] v = {tv01,tv02,tv03};
+        pager.setAdapter(new PagerAdapter() {
+            @Override
+            public int getCount() {
+                return v.length;
+            }
+
+            @Override
+            public boolean isViewFromObject(View view, Object object) {
+                return view == object;
+            }
+            @Override
+            public Object instantiateItem(ViewGroup container, int position) {
+                View view = v[position];
+                ((ViewPager) container).addView(view, 0);
+                return view;
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object) {
+                ((ViewPager) container).removeView(v[position]);
+            }
+        });
+        indicator.setViewPager(pager);
     }
 }

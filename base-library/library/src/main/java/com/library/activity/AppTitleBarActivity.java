@@ -36,7 +36,7 @@ public abstract class AppTitleBarActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //去掉标题栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         //总布局
         Total_layout = new RelativeLayout(this);
         //标题栏
