@@ -3,17 +3,18 @@
         <item name="android:fitsSystemWindows">true</item>
         <!--标题栏样式-->
         <item name="titleBarAttr">@style/StyleTitleBar</item>
+        <item name="scrollPageAttr">@style/defaultScrollPageView</item>
     </style>
 
     <!--定义标题栏样式-->
     <style name="StyleTitleBar" parent="defaultTitleBarStyle">
         <!--标题栏高度-->
         <item name="barHeight">48dp</item>
-        <item name="barBackground">#413ef7</item>
+        <item name="barBackground">#3ea1f7</item>
         <item name="barTitleTextSize">22px</item>
         <item name="barTitleTextColor">#FFFFFF</item>
-
-     <!--   &lt;!&ndash;标题栏背景&ndash;&gt;
-        <item name="barBackground">#f57c78</item>-->
+    </style>
+    <style name="StyleScrollPageView" parent="defaultScrollPageView">
+        <item name="indicatorColor">#3ea1f7</item>
     </style>
 </resources>
